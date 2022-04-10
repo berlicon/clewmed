@@ -12,6 +12,15 @@
 		"title": "Sex?",
 		"type": "radio"
 	},
+	{
+		"title": "Blood pressure",
+		"type": "select",
+		"options": [
+		"Low",
+		"Middle",
+		"High"
+		]
+	},
     {
 		"title": "Are you using any heart medications ?",
 		"type": "radio",

@@ -1,5 +1,12 @@
 {{item.title}} 
+
 <input type="text" *ngIf="item.type == 'string'">
+
 <input type="number" *ngIf="item.type == 'number'">
+
 <input type="radio" *ngIf="item.type == 'radio'" value="true" [name]="item.title">
 <input type="radio" *ngIf="item.type == 'radio'" value="false" [name]="item.title">
+
+<select *ngIf="item.type == 'select'">
+    <option *ngFor="let x of item.options">{{x}}</option>
+</select>
