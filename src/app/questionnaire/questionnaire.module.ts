@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
+import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-item.component';
 
 @NgModule({
   declarations: [
-    QuestionnaireComponent
+    QuestionnaireComponent,
+    QuestionnaireItemComponent
   ],
   imports: [
     CommonModule
