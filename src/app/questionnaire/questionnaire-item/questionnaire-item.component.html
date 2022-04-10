@@ -1,12 +1,18 @@
-{{item.title}} 
+<div style="margin: 25px">
+    {{item.title}} 
 
-<input type="text" *ngIf="item.type == 'string'">
+    <input type="text" *ngIf="item.type == 'string'">
 
-<input type="number" *ngIf="item.type == 'number'">
+    <input type="number" *ngIf="item.type == 'number'">
 
-<input type="radio" *ngIf="item.type == 'radio'" value="true" [name]="item.title">
-<input type="radio" *ngIf="item.type == 'radio'" value="false" [name]="item.title">
+    <input type="radio" *ngIf="item.type == 'radio'" value="true" [name]="item.title">
+    <input type="radio" *ngIf="item.type == 'radio'" value="false" [name]="item.title">
 
-<select *ngIf="item.type == 'select'">
-    <option *ngFor="let x of item.options">{{x}}</option>
-</select>
+    <select *ngIf="item.type == 'select'">
+        <option *ngFor="let x of item.options">{{x}}</option>
+    </select>
+
+    <div *ngFor="let child of item.childItems" style="margin-left: 25px;">
+        <app-questionnaire-item [item]="child"></app-questionnaire-item>
+    </div>
+</div>
