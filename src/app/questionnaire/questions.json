@@ -5,6 +5,14 @@
 		"type": "number"
     },
     {
+		"title": "Name",
+		"type": "string"
+    },
+	{
+		"title": "Sex?",
+		"type": "radio"
+	},
+    {
 		"title": "Are you using any heart medications ?",
 		"type": "radio",
 		"childItems": [
