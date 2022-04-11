@@ -21,6 +21,10 @@
 		"High"
 		]
 	},
+	{
+		"title": "Are you agree?",
+		"type": "checkbox"
+	},
     {
 		"title": "Are you using any heart medications ?",
 		"type": "radio",
