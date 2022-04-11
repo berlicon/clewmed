@@ -1,14 +1,14 @@
 <div style="margin: 25px">
     {{item.title}} 
 
-    <input type="text" *ngIf="item.type == 'string'">
+    <input type="text" *ngIf="item.type == 'string'" [(ngModel)]="item.value">
 
-    <input type="number" *ngIf="item.type == 'number'">
+    <input type="number" *ngIf="item.type == 'number'" [(ngModel)]="item.value">
 
-    <input type="radio" *ngIf="item.type == 'radio'" value="true" [name]="item.title">
-    <input type="radio" *ngIf="item.type == 'radio'" value="false" [name]="item.title">
+    <input type="radio" *ngIf="item.type == 'radio'" [value]="true" [name]="item.title" [(ngModel)]="item.value">
+    <input type="radio" *ngIf="item.type == 'radio'" [value]="false" [name]="item.title" [(ngModel)]="item.value">
 
-    <select *ngIf="item.type == 'select'">
+    <select *ngIf="item.type == 'select'" [(ngModel)]="item.value">
         <option *ngFor="let x of item.options">{{x}}</option>
     </select>
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-item.component';
 
@@ -9,7 +10,8 @@ import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-i
     QuestionnaireItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class QuestionnaireModule { }
