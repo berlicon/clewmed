@@ -25,6 +25,10 @@
 		"title": "Are you agree?",
 		"type": "checkbox"
 	},
+	{
+		"title": "Your birthday",
+		"type": "date"
+	},
     {
 		"title": "Are you using any heart medications ?",
 		"type": "radio",

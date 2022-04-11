@@ -14,6 +14,8 @@
 
     <input type="checkbox" *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value">    
 
+    <input type="date" *ngIf="item.type == 'date'" [(ngModel)]="item.value">    
+
     <div *ngFor="let child of item.childItems" style="margin-left: 25px;">
         <app-questionnaire-item *ngIf="!child.parentAnswer || child.parentAnswer == item.value" [item]="child"></app-questionnaire-item>
     </div>
