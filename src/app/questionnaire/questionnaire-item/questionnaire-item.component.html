@@ -5,14 +5,14 @@
 
     <input type="number" *ngIf="item.type == 'number'" [(ngModel)]="item.value">
 
-    <input type="radio" *ngIf="item.type == 'radio'" [value]="true" [name]="item.title" [(ngModel)]="item.value">
-    <input type="radio" *ngIf="item.type == 'radio'" [value]="false" [name]="item.title" [(ngModel)]="item.value">
+    <input type="radio" *ngIf="item.type == 'radio'" [value]="1" [name]="item.title" [(ngModel)]="item.value">
+    <input type="radio" *ngIf="item.type == 'radio'" [value]="0" [name]="item.title" [(ngModel)]="item.value">
 
     <select *ngIf="item.type == 'select'" [(ngModel)]="item.value">
         <option *ngFor="let x of item.options">{{x}}</option>
     </select>
 
     <div *ngFor="let child of item.childItems" style="margin-left: 25px;">
-        <app-questionnaire-item [item]="child"></app-questionnaire-item>
+        <app-questionnaire-item *ngIf="!child.parentAnswer || child.parentAnswer == item.value" [item]="child"></app-questionnaire-item>
     </div>
 </div>
