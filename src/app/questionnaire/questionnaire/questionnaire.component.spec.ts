@@ -9,10 +9,12 @@ import { QuestionnaireComponent } from './questionnaire.component';
 describe('QuestionnaireComponent', () => {
   let component: QuestionnaireComponent;
   let fixture: ComponentFixture<QuestionnaireComponent>;
-  let inputTextDe: DebugElement;
-  let inputTextEl: any;
   let inputLabelDe: DebugElement;
   let inputLabelEl: any;
+  let inputNumberDe: DebugElement;
+  let inputNumberEl: any;
+  let inputTextDe: DebugElement;
+  let inputTextEl: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -130,12 +132,19 @@ describe('QuestionnaireComponent', () => {
     .toContain("Age");
 
     //debugger;
-    inputTextDe = fixture.debugElement.query(By.css('.input-number'));
+    inputNumberDe = fixture.debugElement.query(By.css('.input-number'));
+    inputNumberEl = inputNumberDe.nativeElement;
+
+    // expect(inputNumberEl.textContent)
+    // .withContext('input number should be created')
+    // .toContain(1);
+
+    inputTextDe = fixture.debugElement.query(By.css('.input-text'));
     inputTextEl = inputTextDe.nativeElement;
 
     // expect(inputTextEl.textContent)
     // .withContext('input text should be created')
-    // .toContain(1);
+    // .toContain('a');
 
 
 
