@@ -1,20 +1,20 @@
 <div style="margin: 25px">
-    {{item.title}} 
+    <span class="label">{{item.title}}</span>
 
-    <input type="text" *ngIf="item.type == 'string'" [(ngModel)]="item.value">
+    <input type="text" *ngIf="item.type == 'string'" [(ngModel)]="item.value" class="input-text">
 
-    <input type="number" *ngIf="item.type == 'number'" [(ngModel)]="item.value">
+    <input type="number" *ngIf="item.type == 'number'" [(ngModel)]="item.value" class="input-number">
 
-    <input type="radio" *ngIf="item.type == 'radio'" [value]="1" [name]="item.title" [(ngModel)]="item.value">
-    <input type="radio" *ngIf="item.type == 'radio'" [value]="0" [name]="item.title" [(ngModel)]="item.value">
+    <input type="radio" *ngIf="item.type == 'radio'" [value]="1" [name]="item.title" [(ngModel)]="item.value" class="radio">
+    <input type="radio" *ngIf="item.type == 'radio'" [value]="0" [name]="item.title" [(ngModel)]="item.value" class="radio">
 
-    <select *ngIf="item.type == 'select'" [(ngModel)]="item.value">
+    <select *ngIf="item.type == 'select'" [(ngModel)]="item.value" class="select">
         <option *ngFor="let x of item.options">{{x}}</option>
     </select>
 
-    <input type="checkbox" *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value">    
+    <input type="checkbox" *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value" class="input-checkbox">    
 
-    <input type="date" *ngIf="item.type == 'date'" [(ngModel)]="item.value">    
+    <input type="date" *ngIf="item.type == 'date'" [(ngModel)]="item.value" class="input-date">    
 
     <div *ngFor="let child of item.childItems" style="margin-left: 25px;">
         <app-questionnaire-item *ngIf="!child.parentAnswer || child.parentAnswer == item.value" [item]="child"></app-questionnaire-item>
