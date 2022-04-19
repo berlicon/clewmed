@@ -135,6 +135,10 @@ describe('QuestionnaireComponent', () => {
     inputNumberDe = fixture.debugElement.query(By.css('.input-number'));
     inputNumberEl = inputNumberDe.nativeElement;
 
+    expect(inputNumberEl.textContent)
+    .withContext('input number should be created')
+    .toBeDefined();
+
     // expect(inputNumberEl.textContent)
     // .withContext('input number should be created')
     // .toContain(1);
