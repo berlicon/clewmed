@@ -17,7 +17,12 @@
     
     <mat-slider  *ngIf="item.type == 'slider'" [(ngModel)]="item.value" min="1" max="100" step="1" value="50"></mat-slider>
 
-    <input type="date" *ngIf="item.type == 'date'" [(ngModel)]="item.value" class="input-date">    
+    <!-- <input type="date" *ngIf="item.type == 'date'" [(ngModel)]="item.value" class="input-date">         -->
+    <ng-container *ngIf="item.type == 'date'">
+        <input matInput [matDatepicker]="picker" [(ngModel)]="item.value" class="input-date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </ng-container>
 
     <div *ngFor="let child of item.childItems" style="margin-left: 25px;">
         <app-questionnaire-item *ngIf="!child.parentAnswer || child.parentAnswer == item.value" [item]="child"></app-questionnaire-item>

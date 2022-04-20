@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatNativeDateModule } from '@angular/material/core';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-item.component';
 
@@ -17,7 +19,9 @@ import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-i
     FormsModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-    MatSliderModule
+    MatSliderModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class QuestionnaireModule { }

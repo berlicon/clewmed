@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatNativeDateModule } from '@angular/material/core';
 import { By } from '@angular/platform-browser';
 import { Item } from '../item';
 import { QuestionnaireItemComponent } from '../questionnaire-item/questionnaire-item.component';
@@ -22,11 +24,15 @@ describe('QuestionnaireComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule,
+      imports: [
+        FormsModule,
         CommonModule,
         BrowserAnimationsModule,
         MatCheckboxModule,
-        MatSliderModule],
+        MatSliderModule,
+        MatDatepickerModule,
+        MatNativeDateModule
+      ],
       declarations: [ QuestionnaireComponent, QuestionnaireItemComponent ]
     })
     .compileComponents();
