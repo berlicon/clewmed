@@ -1,9 +1,9 @@
 <div style="margin: 25px">
     <span class="label">{{item.title}}</span>
 
-    <input type="text" *ngIf="item.type == 'string'" [(ngModel)]="item.value" class="input-text">
+    <input type="text" *ngIf="item.type == 'string'" [(ngModel)]="item.value" class="input-text" matInput placeholder="input text">
 
-    <input type="number" *ngIf="item.type == 'number'" [(ngModel)]="item.value" class="input-number">
+    <input type="number" *ngIf="item.type == 'number'" [(ngModel)]="item.value" class="input-number" matInput placeholder="input number">
 
     <input type="radio" *ngIf="item.type == 'radio'" [value]="1" [name]="item.title" [(ngModel)]="item.value" class="radio">
     <input type="radio" *ngIf="item.type == 'radio'" [value]="0" [name]="item.title" [(ngModel)]="item.value" class="radio">
