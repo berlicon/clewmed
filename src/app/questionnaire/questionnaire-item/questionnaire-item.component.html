@@ -12,7 +12,10 @@
         <option *ngFor="let x of item.options">{{x}}</option>
     </select>
 
-    <input type="checkbox" *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value" class="input-checkbox">    
+    <!-- <input type="checkbox" *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value" class="input-checkbox">  -->
+    <mat-checkbox *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value" class="input-checkbox"></mat-checkbox>    
+    
+    <mat-slider  *ngIf="item.type == 'slider'" [(ngModel)]="item.value" min="1" max="100" step="1" value="50"></mat-slider>
 
     <input type="date" *ngIf="item.type == 'date'" [(ngModel)]="item.value" class="input-date">    
 

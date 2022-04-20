@@ -26,6 +26,10 @@
 		"type": "checkbox"
 	},
 	{
+		"title": "How much you satisfied?",
+		"type": "slider"
+	},
+	{
 		"title": "Your birthday",
 		"type": "date"
 	},

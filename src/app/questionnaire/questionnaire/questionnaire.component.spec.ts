@@ -1,10 +1,14 @@
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSliderModule } from '@angular/material/slider';
 import { By } from '@angular/platform-browser';
 import { Item } from '../item';
 import { QuestionnaireItemComponent } from '../questionnaire-item/questionnaire-item.component';
 import { QuestionnaireComponent } from './questionnaire.component';
+import { CommonModule } from '@angular/common';
 
 describe('QuestionnaireComponent', () => {
   let component: QuestionnaireComponent;
@@ -18,7 +22,11 @@ describe('QuestionnaireComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule,
+        CommonModule,
+        BrowserAnimationsModule,
+        MatCheckboxModule,
+        MatSliderModule],
       declarations: [ QuestionnaireComponent, QuestionnaireItemComponent ]
     })
     .compileComponents();
@@ -59,6 +67,11 @@ describe('QuestionnaireComponent', () => {
         "type": "checkbox",
         "value": 1
       },
+      {
+        "title": "How much you satisfied?",
+        "type": "slider",
+        "value": 75
+      },      
       {
         "title": "Your birthday",
         "type": "date",
