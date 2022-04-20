@@ -19,7 +19,7 @@
 
     <!-- <input type="date" *ngIf="item.type == 'date'" [(ngModel)]="item.value" class="input-date">         -->
     <ng-container *ngIf="item.type == 'date'">
-        <input matInput [matDatepicker]="picker" [(ngModel)]="item.value" class="input-date">
+        <input matInput [matDatepicker]="picker" [(ngModel)]="item.value" class="input-date" placeholder="input date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </ng-container>
