@@ -6,6 +6,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-item.component';
 
@@ -21,7 +23,8 @@ import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-i
     MatCheckboxModule,
     MatSliderModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatRadioModule
   ]
 })
 export class QuestionnaireModule { }

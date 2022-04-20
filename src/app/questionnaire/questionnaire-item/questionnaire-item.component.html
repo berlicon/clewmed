@@ -5,8 +5,16 @@
 
     <input type="number" *ngIf="item.type == 'number'" [(ngModel)]="item.value" class="input-number" matInput placeholder="input number">
 
-    <input type="radio" *ngIf="item.type == 'radio'" [value]="1" [name]="item.title" [(ngModel)]="item.value" class="radio">
-    <input type="radio" *ngIf="item.type == 'radio'" [value]="0" [name]="item.title" [(ngModel)]="item.value" class="radio">
+    <!-- <input type="radio" *ngIf="item.type == 'radio'" [value]="1" [name]="item.title" [(ngModel)]="item.value" class="radio">
+    <input type="radio" *ngIf="item.type == 'radio'" [value]="0" [name]="item.title" [(ngModel)]="item.value" class="radio"> -->
+    <mat-radio-group 
+        *ngIf="item.type == 'radio'"
+        class="radio-group"
+        [(ngModel)]="item.value">
+        <mat-radio-button class="radio" *ngFor="let v of [1, 0]" [value]="v">
+            {{v == 1 ? 'Yes' : 'No'}}&nbsp;&nbsp;
+        </mat-radio-button>
+    </mat-radio-group>
 
     <select *ngIf="item.type == 'select'" [(ngModel)]="item.value" class="select">
         <option *ngFor="let x of item.options">{{x}}</option>

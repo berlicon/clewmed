@@ -6,6 +6,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
 import { By } from '@angular/platform-browser';
 import { Item } from '../item';
 import { QuestionnaireItemComponent } from '../questionnaire-item/questionnaire-item.component';
@@ -31,7 +32,8 @@ describe('QuestionnaireComponent', () => {
         MatCheckboxModule,
         MatSliderModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatRadioModule
       ],
       declarations: [ QuestionnaireComponent, QuestionnaireItemComponent ]
     })
