@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuestionnaireModule } from './questionnaire/questionnaire.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { QuestionnaireModule } from './questionnaire/questionnaire.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    QuestionnaireModule
+    QuestionnaireModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
