@@ -1,5 +1,5 @@
 <div style="margin: 25px">
-    <span class="label">{{item.title}}</span>
+    <span class="label" style="display: inline-block; width: 200px;">{{item.title}}</span>
 
     <input type="text" *ngIf="item.type == 'string'" [(ngModel)]="item.value" class="input-text" matInput placeholder="input text">
 
@@ -16,9 +16,14 @@
         </mat-radio-button>
     </mat-radio-group>
 
-    <select *ngIf="item.type == 'select'" [(ngModel)]="item.value" class="select">
+    <!-- <select *ngIf="item.type == 'select'" [(ngModel)]="item.value" class="select">
         <option *ngFor="let x of item.options">{{x}}</option>
-    </select>
+    </select> -->
+    <mat-select *ngIf="item.type == 'select'" [(ngModel)]="item.value" class="select" style="width: 200px;">
+        <mat-option *ngFor="let x of item.options" [value]="x">
+          {{x}}
+        </mat-option>
+    </mat-select>
 
     <!-- <input type="checkbox" *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value" class="input-checkbox">  -->
     <mat-checkbox *ngIf="item.type == 'checkbox'" [(ngModel)]="item.value" class="input-checkbox"></mat-checkbox>    

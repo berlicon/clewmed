@@ -7,6 +7,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 import { By } from '@angular/platform-browser';
 import { Item } from '../item';
 import { QuestionnaireItemComponent } from '../questionnaire-item/questionnaire-item.component';
@@ -33,7 +34,8 @@ describe('QuestionnaireComponent', () => {
         MatSliderModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatRadioModule
+        MatRadioModule,
+        MatSelectModule
       ],
       declarations: [ QuestionnaireComponent, QuestionnaireItemComponent ]
     })
