@@ -1,18 +1,19 @@
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { By } from '@angular/platform-browser';
+import { Item } from '../item';
+import { QuestionnaireItemComponent } from '../questionnaire-item/questionnaire-item.component';
+import { QuestionnaireComponent } from './questionnaire.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
-import { By } from '@angular/platform-browser';
-import { Item } from '../item';
-import { QuestionnaireItemComponent } from '../questionnaire-item/questionnaire-item.component';
-import { QuestionnaireComponent } from './questionnaire.component';
-import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 describe('QuestionnaireComponent', () => {
   let component: QuestionnaireComponent;
@@ -35,7 +36,8 @@ describe('QuestionnaireComponent', () => {
         MatDatepickerModule,
         MatNativeDateModule,
         MatRadioModule,
-        MatSelectModule
+        MatSelectModule,
+        MatButtonModule
       ],
       declarations: [ QuestionnaireComponent, QuestionnaireItemComponent ]
     })

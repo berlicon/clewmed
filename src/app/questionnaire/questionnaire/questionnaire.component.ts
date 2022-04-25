@@ -14,4 +14,8 @@ export class QuestionnaireComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onRxJsTestClick(): void {
+    alert('onRxJsTestClick');
+  }
 }

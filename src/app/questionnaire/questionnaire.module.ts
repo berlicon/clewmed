@@ -8,6 +8,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-item.component';
@@ -26,7 +27,8 @@ import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-i
     MatDatepickerModule,
     MatNativeDateModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule
   ]
 })
 export class QuestionnaireModule { }
