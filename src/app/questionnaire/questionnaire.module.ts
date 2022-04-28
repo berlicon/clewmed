@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
@@ -21,6 +22,7 @@ import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-i
   imports: [
     CommonModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
     MatSliderModule,
