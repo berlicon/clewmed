@@ -15,6 +15,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { ToastrModule } from 'ngx-toastr';
 
 describe('QuestionnaireComponent', () => {
   let component: QuestionnaireComponent;
@@ -39,7 +40,8 @@ describe('QuestionnaireComponent', () => {
         MatNativeDateModule,
         MatRadioModule,
         MatSelectModule,
-        MatButtonModule
+        MatButtonModule,
+        ToastrModule.forRoot()
       ],
       declarations: [ QuestionnaireComponent, QuestionnaireItemComponent ]
     })

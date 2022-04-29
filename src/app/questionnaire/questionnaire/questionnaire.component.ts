@@ -3,6 +3,7 @@ import { CatFact } from '../cat-fact';
 import { Item } from '../item';
 import { TestService } from '../services/test.service';
 import data from './../questions.json';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-questionnaire',
@@ -13,9 +14,20 @@ export class QuestionnaireComponent implements OnInit {
   array: Item[] = data.patientQuestions as Item[];
   catFact: string;
 
-  constructor(private testService: TestService) { }
+  constructor(private testService: TestService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.toastr.warning('Warning', 'Autosave every 5 sec', {
+      timeOut: 3000,
+    });
+
+    setInterval(() => this.onAutoSave(), 5000);
+  }
+
+  onAutoSave(): void {
+    this.toastr.success('Success', 'Autosave completed', {
+      timeOut: 1000,
+    });
   }
 
   onRxJsTestClick(): void {

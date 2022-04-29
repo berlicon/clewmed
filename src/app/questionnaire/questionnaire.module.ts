@@ -10,6 +10,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { ToastrModule } from 'ngx-toastr';
 
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-item.component';
@@ -30,7 +31,8 @@ import { QuestionnaireItemComponent } from './questionnaire-item/questionnaire-i
     MatNativeDateModule,
     MatRadioModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    ToastrModule.forRoot()
   ]
 })
 export class QuestionnaireModule { }
