@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { By } from '@angular/platform-browser';
-import { Item } from '../item';
+import { Item } from '../model/item';
 import { QuestionnaireItemComponent } from '../questionnaire-item/questionnaire-item.component';
 import { QuestionnaireComponent } from './questionnaire.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';

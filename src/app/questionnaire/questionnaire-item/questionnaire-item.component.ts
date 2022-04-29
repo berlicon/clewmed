@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Item } from '../item';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-questionnaire-item',

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CatFact } from '../cat-fact';
-import { Item } from '../item';
+import { CatFact } from '../model/cat-fact';
 import { TestService } from '../services/test.service';
 import data from './../questions.json';
 import { ToastrService } from 'ngx-toastr';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-questionnaire',

@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { TestService } from './test.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CatFact } from '../cat-fact';
 import { defer } from 'rxjs';
+import { CatFact } from '../model/cat-fact';
 
 describe('TestService', () => {
   let httpClientSpy: jasmine.SpyObj<HttpClient>;
